@@ -28,7 +28,7 @@ if not db_uri:
     st.info("Please enter the database info and uri")
 if not api_key:
     st.info("Please add the groq api key")
-llm = ChatGroq(groq_api_key=api_key,model="llama3-8b-8192",streaming=True)
+llm = ChatGroq(api_key=api_key,model="llama3-8b-8192",streaming=True)
 @st.cache_resource(ttl="2h")
 def configure_db(db_uri,mysql_host=None,mysql_user=None,mysql_password=None,mysql_db=None):
     if db_uri==LOCALDB:
