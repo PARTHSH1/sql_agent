@@ -9,8 +9,6 @@ from sqlalchemy import create_engine
 import sqlite3
 import os 
 from langchain_groq.chat_models import ChatGroq
-from dotenv import load_dotenv
-load_dotenv()
 st.set_page_config(page_title="Langchain: Chat with sql db ",page_icon="😂")
 st.title("(●'◡'●)    Langchain : chat with sql db ")
 LOCALDB = "USE_LOCALDB"
